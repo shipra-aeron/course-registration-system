@@ -13,6 +13,7 @@ public class Main {
                         result[i] = crs.createCourse(query[1], query[2], Integer.parseInt(query[3])) ? "true" : "false";
                 case "REGISTER_FOR_COURSE" -> result[i] = crs.registerForCourse(query[1], query[2]) ? "true" : "false";
                 case "GET_PAIRED_STUDENTS" -> result[i] = crs.getPairedStudents();
+                case "GET_GPA" -> result[i] = crs.calculateGpa(Integer.parseInt(query[1]), query[2]);
                 default -> result[i] = ""; // Handle unknown queries
             }
         }
